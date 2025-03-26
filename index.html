@@ -93,6 +93,9 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            margin-right: 20px; /* Adiciona margem à direita para espaçamento entre os cards */
+            width: 30%; /* Define a largura dos cards para ocupar aproximadamente 30% da linha */
+            flex-basis: calc(33.33% - 20px);
         }
 
         .livro-card:hover {
@@ -100,10 +103,10 @@
         }
 
         .livro-card img {
-            width: 300%;
-            height: 200%;
+            width: 100%;
+            height: auto;
             max-height: 550px;
-            object-fit: cover;
+            object-fit: contain;
         }
 
         .livro-card .p-4 {
@@ -123,6 +126,30 @@
         .livro-card p {
             font-size: 0.9em;
             color: #4b5563;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -20px; /* Compensação para a margem direita dos cards */
+        }
+        .grid-cols-1 {
+            flex-direction: column;
+        }
+        .sm\:grid-cols-2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .md\:grid-cols-3 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .lg\:grid-cols-4{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
         }
     </style>
 </head>
@@ -144,7 +171,34 @@
         <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <div class="livro-card">
                 <a href="acao.html" target="_blank" rel="noopener noreferrer">
-                    <img src="capas\livro28.jpg" alt="Dom Quixote">
+                    <img src="capas/livro28.jpg" alt="Dom Quixote">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Dom Quixote</h2>
+                        <p class="text-gray-600">Miguel de Cervantes</p>
+                    </div>
+                </a>
+            </div>
+             <div class="livro-card">
+                <a href="acao.html" target="_blank" rel="noopener noreferrer">
+                    <img src="capas/livro28.jpg" alt="Dom Quixote">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Dom Quixote</h2>
+                        <p class="text-gray-600">Miguel de Cervantes</p>
+                    </div>
+                </a>
+            </div>
+             <div class="livro-card">
+                <a href="acao.html" target="_blank" rel="noopener noreferrer">
+                    <img src="capas/livro28.jpg" alt="Dom Quixote">
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Dom Quixote</h2>
+                        <p class="text-gray-600">Miguel de Cervantes</p>
+                    </div>
+                </a>
+            </div>
+             <div class="livro-card">
+                <a href="acao.html" target="_blank" rel="noopener noreferrer">
+                    <img src="capas/livro28.jpg" alt="Dom Quixote">
                     <div class="p-4">
                         <h2 class="text-lg font-semibold">Dom Quixote</h2>
                         <p class="text-gray-600">Miguel de Cervantes</p>
@@ -153,6 +207,7 @@
             </div>
         </section>
     </main>
+
 
     <footer class="bg-gray-800 text-white py-4 text-center rounded-t-md mt-8 shadow-md">
         <p>© 2025 Livraria Online. Todos os direitos reservados.</p>
