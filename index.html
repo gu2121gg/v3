@@ -93,8 +93,8 @@
             display: flex;
             flex-direction: column;
             height: 100%;
-            margin-right: 20px; /* Adiciona margem à direita para espaçamento entre os cards */
-            width: 30%; /* Define a largura dos cards para ocupar aproximadamente 30% da linha */
+            margin-right: 20px;
+            width: 30%;
             flex-basis: calc(33.33% - 20px);
         }
 
@@ -131,7 +131,7 @@
         .grid {
             display: flex;
             flex-wrap: wrap;
-            margin-right: -20px; /* Compensação para a margem direita dos cards */
+            margin-right: -20px;
         }
         .grid-cols-1 {
             flex-direction: column;
@@ -150,6 +150,19 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+        }
+
+        /* Ajuste para dispositivos móveis */
+        @media (max-width: 768px) {
+            .livro-card {
+                width: 100%; /* Os cards ocupam 100% da largura em telas pequenas */
+                margin-right: 0; /* Remove a margem direita em telas pequenas */
+                margin-bottom: 20px; /* Adiciona margem inferior para espaçamento */
+                flex-basis: 100%;
+            }
+            .grid {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
